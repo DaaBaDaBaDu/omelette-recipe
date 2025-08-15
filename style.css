@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --background: #f3e5d8;
+    --branco: #ffffff;
+    --roxo-claro: #fff7fc;
+    --roxo-escuro: #6c364e;
+    --cinza-escuro: #534c46;
+    --linha: #e0e0e0;
+    --marrom: #844631;
+}
+
+body {
+    box-sizing: border-box;
+    background: var(--background);
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    flex-direction: column;
+    font-family: "Outfit", sans-serif;
+    font-size: 16px;
+}
+
+.container {
+    margin: 3rem auto;
+    background: var(--branco);
+    border-radius: 15px;
+    padding: 2rem;
+    width: 70vh;
+}
+
+.container__imagem__omelette{
+    width: 100%;
+    border-radius: 15px;
+}
+
+.container__titulo {
+    font-size: 42px;
+    padding: 1rem 0;
+    color: var(--cinza-escuro);
+}
+
+.container__texto {
+    padding-bottom: 1rem;
+    margin-bottom: 1em;
+}
+
+.preparacao {
+    background: var(--roxo-claro);
+    padding: 20px 30px;
+    border-radius: 10px;
+}
+
+.preparacao__titulo {
+    color: var(--roxo-escuro);
+    padding-bottom: 1em;
+}
+
+.preparacao__lista {
+    padding-left: 1em;
+}
+
+.preparacao__lista__item {
+    padding: 0 0 .8em 1.5em;
+}
+
+.preparacao__lista__item::marker {
+    color: var(--roxo-escuro);
+}
+
+.item__emphasis {
+    color: var(--cinza-escuro);
+    font-weight: 700;
+}
+
+.etapas {
+    padding: 2em 0 0 0;
+}
+
+.etapas__titulo {
+    font-size: 32px;
+    color: var(--marrom);
+    padding-bottom: .8em;
+}
+
+.etapas__lista {
+    padding-left: 1.8em;
+    padding-bottom: 1.6em;
+    border-bottom: 1px solid var(--linha);
+}
+
+.etapas__lista__item {
+    padding: 0 0 .5em 1em;
+}
+
+.etapas__lista__item::marker {
+    color: var(--marrom);
+}
+
+.emphasis::marker {
+    font-weight: bold;
+}
+
+.tabela__linha {
+    border-bottom: 1px solid var(--linha);
+    padding: 1em 0;
+}
+
+.tabela__linha__conteudo {
+    display: flex;
+    justify-content: space-around;
+    margin-left: 2em;
+}
+
+.tabela__linha__item {
+    flex: 1 1;
+    color: var(--cinza-escuro);
+}
+
+.tabela__linha__valor {
+    flex: 0 0 50%;
+    text-align: left;
+    color: var(--marrom);
+    font-weight: 700;
+}
+
+.remover__linha {
+    border: none;
+}
+
+
+@media screen and (max-width: 600px) {
+    .container {
+        margin: 0px;
+        border-radius: 0px;
+        padding: 0px;
+        width: 100vw;
+    }
+
+    .container__imagem__omelette {
+        border-radius: 0px;
+    }
+
+    .container__titulo {
+        padding: .8em;
+    }
+
+    .container__texto, .preparacao, .etapas {
+        margin: 0 2em 0 2em;
+    }
+
+    .texto__nutricao {
+        width: 80%;
+    }
+
+    .distanciamento {
+        margin-bottom: 1em;
+    }
+
+}
